@@ -14,7 +14,13 @@ public class Main{
         String out = scanner.next();
 
         System.out.println("vystup z klavesnice: " + out);
+        int celkovyvypocet = pocetsamohlasok(out);
 
+        System.out.println("celkovy vypocet je " + celkovyvypocet);
+
+    }
+
+    private static int pocetsamohlasok(String out) {
         int celkovypocet= 0;
         for (int x= 0; x < out.length(); x++){
             switch (out.charAt(x)){
@@ -40,17 +46,10 @@ public class Main{
                     break;
             }
         }
-        System.out.println(celkovypocet);
-
-
-
-
-
-
-
+        return celkovypocet;
     }
 
-
+}
    /* @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -63,4 +62,4 @@ public class Main{
     public static void main(String[] args) {
         launch(args);
     }*/
-}
+
